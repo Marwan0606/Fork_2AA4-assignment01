@@ -8,11 +8,10 @@ package CatanGame;
 /**
  * 
  */
-public class Dice {
+public interface Dice {
 	/**
 	 * 
 	 * @return 
 	 */
-	public Integer roll() {
-	}
+	public Integer roll();
 }
