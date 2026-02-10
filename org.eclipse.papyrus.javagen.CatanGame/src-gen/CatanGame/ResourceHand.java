@@ -23,7 +23,7 @@ public class ResourceHand {
 	/**
 	 * Adds a specified amount of a resource type to the hand
 	 * @param type Type of resource to add
-	 * @param amount Quantity of resources to add 
+	 * @param amount Quantity of resource to add 
 	 */
 	public void add(ResourceType type, Integer amount) {
 		if(amount < 0) {
@@ -48,7 +48,7 @@ public class ResourceHand {
 	}
 
 	/**
-	 * @return Total number of resource cards in the hand 
+	 * @return Total number of resource cards in the hand   
 	 */
 	public int totalCards() {
 		int total = 0;

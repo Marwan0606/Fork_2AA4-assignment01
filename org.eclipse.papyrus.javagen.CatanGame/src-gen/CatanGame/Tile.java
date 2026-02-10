@@ -12,7 +12,7 @@ public class Tile {
 	/**
 	 * 
 	 */
-	private Integer id;
+	private int id;
 	/**
 	 * 
 	 */
@@ -20,7 +20,7 @@ public class Tile {
 	/**
 	 * 
 	 */
-	private Integer numberToken;
+	private int numberToken;
 	/**
 	 * 
 	 */
@@ -34,7 +34,7 @@ public class Tile {
 		return resourceType;
 	}
 
-	public Integer getNumberToken() {
+	public int getNumberToken() {
 		return numberToken;
 	}
 

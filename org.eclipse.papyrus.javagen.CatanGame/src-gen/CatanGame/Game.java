@@ -15,15 +15,15 @@ public class Game {
 	/**
 	 * 
 	 */
-	private Integer currentRound;
+	private int currentRound;
 	/**
 	 * 
 	 */
-	private Integer maxRounds;
+	private int maxRounds;
 	/**
 	 * 
 	 */
-	private Boolean gameFinished;
+	private boolean gameFinished;
 	/**
 	 * 
 	 */
@@ -101,7 +101,7 @@ public class Game {
 	 * 
 	 * @return 
 	 */
-	public Boolean checkTerminationCondition() {
+	public boolean checkTerminationCondition() {
 	}
 
 	/**

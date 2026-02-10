@@ -16,7 +16,7 @@ public class BuildRoad extends Action {
 	 * @param edge Edge where road will be built
 	 */
 	public BuildRoad(Edge edge) {
-		
+
 		// Verify building location is not already occupied 
 		if(edge.edgeOccupied()) {
 			throw new IllegalArgumentException("There is already a road on the edge"); 
@@ -27,8 +27,8 @@ public class BuildRoad extends Action {
 
 	/**
 	 * Executes the action of building a road 
-	 * @param game 
-	 * @param player
+	 * @param game Game instance 
+	 * @param player player which action is being performed by
 	 */
 	@Override
 	public void execute(Game game, Player player) {

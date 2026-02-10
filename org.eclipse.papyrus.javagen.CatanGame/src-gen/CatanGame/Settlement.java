@@ -13,7 +13,7 @@ public class Settlement extends Building {
 	 * 
 	 * @return 
 	 */
-	public Integer getVictoryPoints() {
+	public int getVictoryPoints() {
 		return 1;
 	}
 }

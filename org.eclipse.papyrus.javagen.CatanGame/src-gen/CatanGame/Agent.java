@@ -12,7 +12,7 @@ public class Agent {
 	/**
 	 * 
 	 */
-	private Integer id;
+	private int id;
 	/**
 	 * 
 	 */

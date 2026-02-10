@@ -12,7 +12,7 @@ public class Edge {
 	/**
 	 * 
 	 */
-	private Integer id;
+	private int id;
 	/**
 	 * 
 	 */
@@ -30,12 +30,11 @@ public class Edge {
 	 * Checksi if edge is occupied by a road
 	 * @return occupied status of edge
 	 */
-	public Boolean edgeOccupied() {
+	public boolean edgeOccupied() {
 		return road != null; 
 	}
 
 	/**
-	 * 
 	 */
 	public void addRoad() {
 	}

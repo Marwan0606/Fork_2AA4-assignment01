@@ -36,7 +36,7 @@ public class Board {
 	 * @param id 
 	 * @return 
 	 */
-	public Tile getTileById(Integer id) {
+	public Tile getTileById(int id) {
 	}
 
 	public List<Tile> getTilesByToken(int token) {
@@ -55,7 +55,7 @@ public class Board {
 	 * @param id 
 	 * @return 
 	 */
-	public Node getNodeById(Integer id) {
+	public Node getNodeById(int id) {
 	}
 
 	/**
@@ -63,6 +63,6 @@ public class Board {
 	 * @param id 
 	 * @return 
 	 */
-	public Edge getEdgeById(Integer id) {
+	public Edge getEdgeById(int id) {
 	}
 }

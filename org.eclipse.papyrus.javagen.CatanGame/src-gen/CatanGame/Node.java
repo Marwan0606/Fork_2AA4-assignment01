@@ -12,7 +12,7 @@ public class Node {
 	/**
 	 * 
 	 */
-	private Integer id;
+	private int id;
 	/**
 	 * 
 	 */
@@ -26,7 +26,7 @@ public class Node {
 	 * Checks if node is occupied by a building
 	 * @return occupied status of node
 	 */
-	public Boolean nodeOccupied() {
+	public boolean nodeOccupied() {
 		return building != null;
 	}
 

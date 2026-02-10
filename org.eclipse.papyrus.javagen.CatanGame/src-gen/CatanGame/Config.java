@@ -12,7 +12,7 @@ public class Config {
 	/**
 	 * 
 	 */
-	private Integer maxRounds;
+	private int maxRounds;
 	/**
 	 * 
 	 */
