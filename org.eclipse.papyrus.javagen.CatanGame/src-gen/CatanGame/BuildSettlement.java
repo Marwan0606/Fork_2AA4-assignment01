@@ -6,19 +6,30 @@ package CatanGame;
 
 /************************************************************/
 /**
- * 
+ * Class that builds a settlement at a node for a player
  */
 public class BuildSettlement extends Action {
+	private Node node; // Location where settlement will be built
+	
 	/**
-	 * 
+	 * Constructor to initialize the node where the settlement will be built and set the action explanation
+	 * @param node Node where settlement will be built
 	 */
-	private Node node;
+	public BuildSettlement(Node node) {
+		this.node = node;
+		this.actionExplanation = "Build a settlement at node " + node.getId(); 
+	}
 
 	/**
-	 * 
-	 * @param game 
-	 * @param player 
+	 * Executes the action of building a settlement 
+	 * @param game Game instance
+	 * @param player Player which action is being performed by
 	 */
+	@Override
 	public void execute(Game game, Player player) {
+		Settlement settlement = new Settlement(player, node); 
+		game.addBuilding(settlement);
+		player.addBuilding(settlement);
+		player.collectPoints(settlement.getVictoryPoints());
 	}
 }

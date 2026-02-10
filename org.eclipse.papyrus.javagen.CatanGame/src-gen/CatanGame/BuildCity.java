@@ -9,9 +9,6 @@ package CatanGame;
  * 
  */
 public class BuildCity extends Action {
-	/**
-	 * 
-	 */
 	private Node node;
 
 	/**

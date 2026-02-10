@@ -6,27 +6,23 @@ package CatanGame;
 
 /************************************************************/
 /**
- * 
+ * Abstract class reprsenting an action a player can take 
  */
 public abstract class Action {
-	/**
-	 * 
-	 */
-	protected String actionExplanation;
-	/**
-	 * 
-	 */
-	private Game gameInstance;
-	/**
-	 * 
-	 */
-	private Player currentPlayer;
+	protected String actionExplanation; // Explains what the action is 
 
 	/**
-	 * 
-	 * @param game 
-	 * @param player 
+	 * Returns a string explaining what the action is
+	 * @return value of actionExplanation attribute
 	 */
-	public void execute(Game game, Player player) {
+	public String getActionExplanation() {
+		return actionExplanation;
 	}
+
+	/**
+	 * Execute the action - implementation defined in subclasses
+	 * @param game Game instance 
+	 * @param player Player which action is being performed by
+	 */
+	public abstract void execute(Game game, Player player);
 }
