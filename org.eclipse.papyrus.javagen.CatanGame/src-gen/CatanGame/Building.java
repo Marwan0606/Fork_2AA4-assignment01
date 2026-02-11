@@ -12,18 +12,23 @@ public abstract class Building {
 	/**
 	 * 
 	 */
-	protected Player owner;
+	private Player owner; 
 	/**
 	 * 
 	 */
 	private Node location;
 
+	public Building(Player owner, Node location) {
+		this.owner = owner;
+		this.location = location;
+		location.addBuilding(this);
+	}
+
 	/**
 	 * 
 	 * @return 
 	 */
-	public Integer getVictoryPoints() {
-	}
+	public abstract int getVictoryPoints();
 
 	/**
 	 * 
