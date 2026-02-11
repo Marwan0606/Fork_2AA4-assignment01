@@ -16,7 +16,7 @@ public class Edge {
 	/**
 	 * 
 	 */
-	private Road road;
+	private Road road = null;
 	/**
 	 * 
 	 */
@@ -26,16 +26,34 @@ public class Edge {
 	 */
 	private Node second;
 
+	public Edge(int id, Node first, Node second) {
+		this.id = id; 
+		this.first = first;
+		this.second = second; 
+	}
+
 	/**
-	 * Checksi if edge is occupied by a road
+	 * Check is if edge is occupied by a road
 	 * @return occupied status of edge
 	 */
 	public boolean edgeOccupied() {
 		return road != null; 
 	}
 
+	public Node getFirst() {
+		return first;
+	}
+
+	public Node getSecond() {
+		return second;
+	}
+
 	/**
 	 */
-	public void addRoad() {
+	public void addRoad(Road road) {
+		if(edgeOccupied()) {
+			throw new IllegalStateException("Edge already occupied by a road");
+		}
+		this.road = road;
 	}
 }

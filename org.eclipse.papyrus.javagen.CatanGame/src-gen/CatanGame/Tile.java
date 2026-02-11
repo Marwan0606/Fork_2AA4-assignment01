@@ -12,7 +12,7 @@ public class Tile {
 	/**
 	 * 
 	 */
-	private int id;
+	private int id; 
 	/**
 	 * 
 	 */
