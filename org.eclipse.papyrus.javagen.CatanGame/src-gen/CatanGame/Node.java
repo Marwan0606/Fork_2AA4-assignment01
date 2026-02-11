@@ -12,19 +12,27 @@ public class Node {
 	/**
 	 * 
 	 */
-	private int id;
+	private int id; 
+	/**
+	 *  
+	 */
+	private Building building = null; 
 	/**
 	 * 
 	 */
-	private Building building;
-	/**
-	 * 
-	 */
-	private Node[] adjacentNodes;
+	private Node[] adjacentNodes = new Node[3];
+
+	public Node(int id) {
+		this.id = id; 
+	}
+
+	public int getId() {
+		return id; 
+	}
 
 	/**
 	 * Checks if node is occupied by a building
-	 * @return occupied status of node
+	 * @return occupied status of node 
 	 */
 	public boolean nodeOccupied() {
 		return building != null;
@@ -34,11 +42,25 @@ public class Node {
 		return building;
 	}
 
+	public Node[] getAdjacentNodes() {
+		return adjacentNodes;
+	}
+
 	/**
 	 * 
 	 * @param building 
 	 */
 	public void addBuilding(Building building) {
-		this.building = building;
+		this.building = building; 
+	}
+
+	public void addAdjacentNode(Node node) {
+		for(int i = 0; i < adjacentNodes.length; i++) {
+			if(adjacentNodes[i] == null) {
+				adjacentNodes[i] = node; 
+				return;
+			}
+		}
+		throw new IllegalStateException("Node cannot have more than 3 adjacent nodes");
 	}
 }
