@@ -33,7 +33,6 @@ public class BuildRoad extends Action {
 	@Override
 	public void execute(Game game, Player player) {
 		Road road = new Road(player, edge);
-		game.addRoad(road);
 		player.addRoad(road);
 	}
 }

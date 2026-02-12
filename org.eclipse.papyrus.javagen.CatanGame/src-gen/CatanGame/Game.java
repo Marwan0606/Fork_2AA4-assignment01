@@ -38,12 +38,25 @@ public class Game {
 	 */
 	public void start() {
 		board.initializeMap();
+
+		while (!gameFinished) {
+			playRound();
+			printRoundSummary();
+			gameFinished = checkTerminationCondition();
+		}
 	}
 
 	/**
 	 * 
 	 */
 	public void playRound() {
+		currentRound = currentRound+1;
+
+		for (Player player: players) {
+			int resultDice = dice.roll();
+			resourceDistributor(resultDice);
+			player.takeTurn(this);
+		}
 	}
 
 	public void resourceDistributor(int rollResult) {
@@ -99,12 +112,22 @@ public class Game {
 	 * @return 
 	 */
 	public boolean checkTerminationCondition() {
+		for (Player player: players) {
+			if (player.getVictoryPoints()>=10) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	/**
 	 * 
 	 */
 	public void printRoundSummary() {
+		System.out.println("Current Round: " + this.currentRound);
+		for (Player player: players) {
+			System.out.println("Player id: " + player.getId() + " Player Hand: " + player.getResourceHand() + " Player Victory Points: " + player.getVictoryPoints());
+		}
 	}
 
 	/**

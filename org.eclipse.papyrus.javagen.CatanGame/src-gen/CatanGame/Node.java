@@ -55,6 +55,13 @@ public class Node {
 	}
 
 	public void addAdjacentNode(Node node) {
+		//need to first check if already adjacent
+		for (int i=0; i<adjacentNodes.length;i++) {
+			if (adjacentNodes[i]==node) {
+				return;
+			}
+		}
+
 		for(int i = 0; i < adjacentNodes.length; i++) {
 			if(adjacentNodes[i] == null) {
 				adjacentNodes[i] = node; 

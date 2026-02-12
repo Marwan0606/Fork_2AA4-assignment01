@@ -33,7 +33,6 @@ public class BuildSettlement extends Action {
 	@Override
 	public void execute(Game game, Player player) {
 		Settlement settlement = new Settlement(player, node); 
-		game.addBuilding(settlement);
 		player.addBuilding(settlement);
 		player.collectPoints(settlement.getVictoryPoints());
 	}

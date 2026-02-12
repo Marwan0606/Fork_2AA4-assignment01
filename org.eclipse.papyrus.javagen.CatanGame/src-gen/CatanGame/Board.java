@@ -12,6 +12,7 @@ public class Board {
 	private List<Edge> edges = new ArrayList<>(); 
 
 	public void initializeMap() {
+		DefaultBoardSetup.configureBoard(this);
 	}
 
 	/**

@@ -32,7 +32,6 @@ public class BuildCity extends Action {
 	@Override 
 	public void execute(Game game, Player player) {
 		City city = new City(player, node);
-		game.addBuilding(city); 
 		player.addBuilding(city);
 		player.collectPoints(city.getVictoryPoints());
 	}

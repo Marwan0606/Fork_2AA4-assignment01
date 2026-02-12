@@ -18,12 +18,17 @@ class Player {
 	 * Constructor to initialize Player with a decision making Agent
 	 * @param agent
 	 */
-	public Player(Agent agent) {
+	public Player(int id, Agent agent) {
+		this.id = id;
 		this.agent = agent;
 		this.hand = new ResourceHand();
 		this.victoryPoints = 0; 
 		this.buildings = new ArrayList<>();
 		this.roads = new ArrayList<>();
+	}
+
+	public int getVictoryPoints() {
+		return victoryPoints;
 	}
 
 	/**
@@ -49,6 +54,7 @@ class Player {
 	 */
 	public void addBuilding(Building building) {
 		buildings.add(building);
+		victoryPoints += building.getVictoryPoints();
 	}
 
 	/**
@@ -57,6 +63,7 @@ class Player {
 	 */
 	public void deleteBuilding(Building building) {
 		buildings.remove(building);
+		victoryPoints -= building.getVictoryPoints();
 	}
 
 	/**
@@ -71,7 +78,11 @@ class Player {
 	 * Returns the player's current hand of resource cards
 	 * @return ResourceHand representing the player's current hand
 	 */
-	public ResourceHand viewHand() {
+	public ResourceHand getResourceHand() {
 		return hand; 
+	}
+
+	public int getId(){
+		return id;
 	}
 }

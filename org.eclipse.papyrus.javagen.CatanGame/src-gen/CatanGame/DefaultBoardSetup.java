@@ -50,7 +50,7 @@ public final class DefaultBoardSetup {
         board.setTile(13, new Tile(13, ResourceType.BRICK, 9));
         board.setTile(14, new Tile(14, ResourceType.BRICK, 8));
         board.setTile(15, new Tile(15, ResourceType.WHEAT, 4));
-        board.setTile(16, new Tile(16, ResourceType.DESERT, 0));
+        board.setTile(16, new Tile(16, null, 0));
         board.setTile(17, new Tile(17, ResourceType.WOOD,  2));
         board.setTile(18, new Tile(18, ResourceType.SHEEP, 10));
     }

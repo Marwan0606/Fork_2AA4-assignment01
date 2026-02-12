@@ -23,5 +23,12 @@ public class Road {
 	 * @return 
 	 */
 	public Edge getRoadLocation() {
+		return location;
+	}
+
+	public Road(Player owner, Edge location) {
+		this.owner = owner;
+		this.location = location;
+		location.addRoad(this);
 	}
 }

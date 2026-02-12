@@ -14,5 +14,6 @@ public class Agent {
 	 * @return 
 	 */
 	public Action chooseAction(Player player, Game game) {
+		return new Pass();
 	}
 }
