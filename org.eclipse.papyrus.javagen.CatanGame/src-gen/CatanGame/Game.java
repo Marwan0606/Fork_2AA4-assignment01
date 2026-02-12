@@ -19,10 +19,6 @@ public class Game {
 	/**
 	 * 
 	 */
-	private int maxRounds;
-	/**
-	 * 
-	 */
 	private boolean gameFinished;
 	/**
 	 * 
@@ -41,6 +37,7 @@ public class Game {
 	 * 
 	 */
 	public void start() {
+		board.initializeMap();
 	}
 
 	/**
@@ -116,6 +113,17 @@ public class Game {
 	 * @param players 
 	 * @param dice 
 	 */
-	public void Game(Board board, Player[] players, Dice dice) {
+	public Game(Board board, Player[] players, Dice dice) {
+
+		if (board==null || players==null || dice==null || players.length<2 || players.length>4){
+			throw new IllegalArgumentException("Error: One or more of the objects given are null");
+		}
+
+		this.board = board;
+		this.players = players;
+		this.dice = dice;
+
+		this.currentRound = 0;
+		this.gameFinished = false;
 	}
 }
