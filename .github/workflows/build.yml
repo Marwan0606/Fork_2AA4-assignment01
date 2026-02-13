@@ -17,3 +17,16 @@ jobs:
         uses: SonarSource/sonarqube-scan-action@v6
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+
+- name: Set up JDK
+  uses: actions/setup-java@v4
+  with:
+    distribution: 'temurin'
+    java-version: '17'
+
+- name: Compile Java (Eclipse-style)
+  run: |
+    mkdir -p bin
+    find src-gen -name "*.java" > sources.txt
+    javac -d bin @sources.txt
